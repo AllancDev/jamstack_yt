@@ -4,7 +4,6 @@ import { Category } from '../../models/Category';
 export async function createCategories(request: Request, response: Response) {
     try {
         const {name, icon} = request.body;
-        console.log(name, icon);
         const category = await Category.create({
             name,
             icon
